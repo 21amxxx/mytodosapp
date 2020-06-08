@@ -8,8 +8,6 @@ import * as biblio from './biblio'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import {AffCat} from './AffCat';
-import AffTodo from './AffTodo';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -19,14 +17,3 @@ ReactDOM.render(
 );
 
 
-
-
-
-$('#send').click(() => {
-	ReactDOM.render(
-  <React.StrictMode>
-    <AffTodo/>
-  </React.StrictMode>,
-  document.getElementById('todo-list')
-);	
-})
