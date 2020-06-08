@@ -1,0 +1,33 @@
+Idee : L'app permet d'ecrire des notes et de sauvegarder des liste de courses, et des taches a accomplir
+
+objectif: 
+- permettre a l'user d'y acceder depuis tous les supports
+- s'occuper du rappel de l'user, plus besoin qu'il se gene
+
+Besoin
+- noter quelques chose pour pouvoir se le rappeler plus tard
+- lister des articles que l'on veut acheter plus tard
+- lister des taches a accomplir plus tard 
+- recevoir des notification a propos des taches et articles a payer.
+
+fonctionnalites
+	Notes
+- ecrire une note
+- lire une note
+- voir toutes les notes
+- supprimer une ou plusieurs notes
+
+	Articles
+- ajouter puis donner le nom, le prix et la date ( jour et heure) a laquelle il veut acheter un article
+- lorsque la date vient, recevoir une notification pour pourvoir se rappeler de le payer
+- lorsque l'on recois la notification, il faut pourvoir dire si l'article est payer ou non
+- voir la liste des articles, payer et ceux non paye
+- suppimer un ou plusiseurs articles
+- selection un article, modifier ses informations ou la marque comme payer
+
+	Taches
+- ajouter une tache, avec comme information : le libelle, la date a laquelle vous voudrez faire la tache et pourquoi.
+- supprimer une ou plusieur taches
+- recevoir des notifications, chaque notification offrant les options, faits ou repporter.
+
+
