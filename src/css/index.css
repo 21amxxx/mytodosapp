@@ -1,0 +1,152 @@
+
+:root {
+	--shadowcolor : #eeeeee;
+}
+
+/*//Global*/
+body
+{
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  height :100vh ;
+}
+
+main
+{
+	scroll-behavior: auto;
+	overflow: auto;
+}
+
+
+
+/*ClasseName and Id*/
+.clroot
+{
+  background-color: white ;
+  max-width: 500px;
+  height :100vh ;
+
+}
+
+.tete
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: grid;
+	grid-template-columns: 92% 8%;
+}
+
+.tete h1
+{
+	display: inline-block;
+	/*width: 420px;*/
+}
+
+.tete span
+{
+	margin-top: 12px;
+}
+
+.nav-content
+{
+	display: none;
+}
+
+.nav-content.active
+{
+	display: block;
+}
+
+.tab .active a {
+	color: black;
+}
+.tab .active {
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0 0px 3px 0px #a8df65;
+}
+
+.tab a{
+	text-decoration: none;
+	color: inherit;
+}
+
+
+.tab {
+	margin: 0;
+	padding: 0;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	//border-bottom: 1px solid black;
+}
+
+.tab li {
+	display: inline;
+	list-style: none !important;
+	text-align: center;
+	padding : 5px 0;
+}
+
+.item-date
+{
+	margin: 20px 0 0 10px;
+	padding: 0;
+}
+
+.item-content 
+{
+	margin: 10px 0px;
+	padding: 10px;
+	background-color: #dee3e2;
+	box-shadow: 0 0 4px 0 var(--shadowcolor);
+	border-radius: 5px;
+}
+
+.item-content .fline 
+{
+	display: grid;
+	grid-template-columns: 93% 7%;
+}
+
+.item-content .fline h5
+{
+	display: inline-block;
+}
+
+.item-content .sline p 
+{
+	display: inline-block;
+	color: grey;
+	margin: 0;
+	padding: 0;
+
+}
+
+.item-content .sline-time
+{
+	width: 200px;
+	margin-left: 10px !important;
+}
+
+
+.item-content .tline p
+{
+	margin: 5px 10px 5px 10px;
+	padding: 0;
+	color: grey;
+	display: none;
+	white-space: nowrap;
+	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+/*//Events*/
+
+a:hover, li:hover {
+	text-decoration: none;
+	color: none;
+
+}
+
+
