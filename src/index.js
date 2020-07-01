@@ -19,39 +19,14 @@ ReactDOM.render(
 );
 
 
+
 (() => {
-	let tabs = document.querySelectorAll('.tab a')
+	let tabs = document.querySelectorAll('.tab li')
 
 	for (var i=0; i < tabs.length; i++)
 	{
-		tabs[i].addEventListener("click", function (e) {
-			biblio.AfficheOnglet(this)
-			biblio.DisplayAzero("#afaire")
-			biblio.DisplayAzero("#complete")
-		})
+		tabs[i].addEventListener("click", biblio.OnClickOnglet)
 	}
-
-	let liste = document.querySelectorAll('.item')
-	
-	for (var j=0; j< liste.length; j++)
-	{
-		liste[j].addEventListener('click', function (a){
-
-			let parent = this.parentNode
-			if ($(this).find('.tline').find('p').css('display') === 'none')
-			{
-				if($(this).find('.tline').find('p').text() !== "")
-				{
-					biblio.DisplayAzero(parent)
-					$(this).find('.tline').find('p').css('display', 'block')
-				}
-			}
-			else
-			{
-				$(this).find('.tline').find('p').css('display', 'none')
-			}
-		})
-	}
-
+	biblio.ResetModal()
 })()
 

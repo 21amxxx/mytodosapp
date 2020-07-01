@@ -19,11 +19,11 @@ main
 }
 
 
-
 /*ClasseName and Id*/
 .clroot
 {
   background-color: white ;
+  /* min-width: 300px;; */
   max-width: 500px;
   height :100vh ;
 
@@ -40,7 +40,7 @@ main
 .tete h1
 {
 	display: inline-block;
-	/*width: 420px;*/
+	color: #eebb4d;
 }
 
 .tete span
@@ -58,27 +58,19 @@ main
 	display: block;
 }
 
-.tab .active a {
-	color: black;
-}
 .tab .active {
 	background-color: white;
 	border-radius: 6px;
-	box-shadow: 0 0px 3px 0px #a8df65;
+	color: #96bb7c;
+	box-shadow: 0 0px 15px 0px #f5f5f5;
 }
-
-.tab a{
-	text-decoration: none;
-	color: inherit;
-}
-
 
 .tab {
-	margin: 0;
+	margin: 15px 0;
 	padding: 0;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	//border-bottom: 1px solid black;
+	/* border-bottom: 1px solid black; */
 }
 
 .tab li {
@@ -106,12 +98,24 @@ main
 .item-content .fline 
 {
 	display: grid;
-	grid-template-columns: 93% 7%;
+	grid-template-columns: 94% 6%;
 }
 
 .item-content .fline h5
 {
 	display: inline-block;
+}
+
+.item-content .fline span 
+{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+.item-content .fline .expand_less
+{
+	display: none;
 }
 
 .item-content .sline p 
@@ -130,15 +134,40 @@ main
 }
 
 
-.item-content .tline p
+.item-content .tline .item-option
 {
-	margin: 5px 10px 5px 10px;
+	/*margin: 5px 10px 5px 10px;*/
 	padding: 0;
 	color: grey;
 	display: none;
 	white-space: nowrap;
 	overflow: hidden;
   	text-overflow: ellipsis;
+}
+
+
+
+.tline span {
+	font-size: 17px !important;
+	margin : 0 5px;
+}
+
+.tline {
+	 display: flex !important;
+	 justify-content:  flex-end;
+	 /*align-items: flex-end;*/
+}
+
+.datehelp, .timehelp, .texthelp {
+	 visibility: hidden;
+	 display: block;
+}
+
+
+/* Forward */
+
+.material-icons.greencol { 
+	font-size: 30px;	
 }
 
 /*//Events*/

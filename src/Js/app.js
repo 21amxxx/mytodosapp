@@ -1,20 +1,15 @@
 import React, { Component } from 'react'
-
 import Content from './content'
 
-const cont = <h1>Bonjour !</h1>
-
 const Title = () => {
-
 	return (
 		<h1> Todo </h1>
 	)
 }
 
 const Addicon = () => {
-
 	return (
-		<span data-toggle="modal" data-target="#exampleModal" className="material-icons md-36">add</span>
+		<span id = "spanmodal" data-toggle="modal" data-target="#addmodal" className="material-icons greencol">add</span>
 	)
 }
 
