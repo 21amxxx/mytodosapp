@@ -12,33 +12,33 @@ class Buttons extends Component {
 	render(){
 		return (
 			<div>
-				<button type="button" className="btn btn-secondary" data-dismiss="modal">Annuler</button>
+				<button type="button" className="btn btn-secondary btn-quit" data-dismiss="modal">Annuler</button>
 				<button type="button" className="btn btn-success" onClick = {(e) => {this.delete(e)}}>Enregistrer</button>
 			</div>
 			)
 	}
 }
 
-class Checkedtotmodal extends React.PureComponent {
+class Checkedtodomodal extends React.PureComponent {
 	render(){
 		let selectedItem = this.props.todolist[this.props.selectedItem]
 		let content = null
 		if(selectedItem !== undefined)
 		{
 			content = <div>
-					<p>Avez-vous execute la tache :</p>
-					<p>{selectedItem.libelle}</p>
+					<p  className = "text-question " >Avez-vous deja execute la tache suivante ? </p>
+					<p className = "text-answer" >{selectedItem.libelle} </p>
 					<div className="custom-control custom-radio">
 						<input type="radio" id="customRadio1" name="customRadio" className="custom-control-input" value = "bb" defaultChecked/>
-						<label className="custom-control-label" htmlFor="customRadio1">Oui, je l'ai realisee</label>
+						<label className="custom-control-label text-question " htmlFor="customRadio1">Oui, je l'ai realisee</label>
 					</div>
 					<div className="custom-control custom-radio">
 						<input type="radio" id="customRadio2" name="customRadio" className="custom-control-input"/>
-						<label className="custom-control-label" htmlFor="customRadio2">Non, j'ai l'ai abandonnee</label>
+						<label className="custom-control-label text-question" htmlFor="customRadio2">Non, j'ai l'ai abandonnee</label>
 					</div>
 					<div className="custom-control custom-radio">
 						<input type="radio" id="customRadio3" name="customRadio" className="custom-control-input"/>
-						<label className="custom-control-label" htmlFor="customRadio3" >Non, je la reporte</label>
+						<label className="custom-control-label text-question" htmlFor="customRadio3" >Non, je la reporte</label>
 					</div>
 					</div>
 		}
@@ -48,5 +48,5 @@ class Checkedtotmodal extends React.PureComponent {
 	}
  }
 
- export default Checkedtotmodal
+ export default Checkedtodomodal
 

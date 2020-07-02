@@ -164,8 +164,8 @@ class Buttons extends Component {
 	return (
 
 	<div>
-		<button type="button" className="btn btn-secondary" data-dismiss="modal">Annuler</button>
-	    <button type="button" className="btn btn-success" onClick = {this.handleClick.bind(this)}>Enregistrer</button>
+		<button type="button" className="btn btn-secondary btn-quit" data-dismiss="modal">Annuler</button>
+	    <button type="button" className="btn btn-success " onClick = {this.handleClick.bind(this)}>Enregistrer</button>
 	</div>
 	)
 }

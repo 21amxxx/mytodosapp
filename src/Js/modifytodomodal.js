@@ -196,7 +196,7 @@ class Buttons extends Component {
 	<div>
 		<button 
 		type="button" 
-		className="btn btn-secondary" 
+		className="btn btn-secondary btn-quit" 
 		data-dismiss="modal">Annuler</button>
 		<button 
 		type="button" 

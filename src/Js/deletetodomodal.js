@@ -11,7 +11,7 @@ class Buttons extends Component {
 	render(){
 		return (
 			<div>
-				<button type="button" className="btn btn-secondary" data-dismiss="modal">Annuler</button>
+				<button type="button" className="btn btn-secondary btn-quit" data-dismiss="modal">Annuler</button>
 				<button type="button" className="btn btn-success" onClick = {(e) => {this.delete(e)}}>Supprimer</button>
 			</div>
 			)
@@ -25,8 +25,8 @@ class Deletetodomodal extends React.PureComponent {
 		if(selectedItem !== undefined)
 		{
 			content = <div>
-			<p>Voulez-vous supprimer definitivement la tache :</p>
-			<p>{selectedItem.libelle}</p>
+			<p className = "text-question " >Voulez-vous supprimer la tache suivante definitivement ?</p>
+			<p className = "text-answer" >{selectedItem.libelle}</p>
 			</div>
 		}
 		return (

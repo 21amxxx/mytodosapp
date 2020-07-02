@@ -24,20 +24,20 @@ class Infotodomodal extends React.PureComponent {
 				formatdate = biblio.ToFormateDate(selectedItem.date)
 			} 
 			content = <div>
-				<h5>Libelle de la tache :</h5>
-				<p>{selectedItem.libelle}</p>
-				<h5>Date et heure d'execution de la tache :</h5>
-				<p>Le {formatdate} a {selectedItem.time}</p>
+				<h5 className = "text-question ">Libelle de la tache :</h5>
+				<p className = "text-answer">{selectedItem.libelle}</p>
+				<h5 className = "text-question ">Date et heure d'execution de la tache :</h5>
+				<p className = "text-answer">Le {formatdate} a {selectedItem.time}</p>
 			</div>
 			if(selectedItem.descripion !== "")
 			{
 				content = <div>
-				<h5>Libelle de la tache :</h5>
-				<p>{selectedItem.libelle}</p>
-				<h5>Date et heure d'execution de la tache :</h5>
-				<p>Le {formatdate} a {selectedItem.time}</p>
-				<h5>Description de la tache :</h5>
-				<p>{selectedItem.descripion}</p>
+				<h5 className = "text-question ">Libelle de la tache :</h5>
+				<p className = "text-answer" >{selectedItem.libelle}</p>
+				<h5 className = "text-question " > Date et heure d'execution de la tache :</h5>
+				<p className = "text-answer"> Le {formatdate} a {selectedItem.time}</p>
+				<h5 className = "text-question ">Description de la tache :</h5>
+				<p className = "text-answer">{selectedItem.descripion}</p>
 			</div>
 			}
 		}

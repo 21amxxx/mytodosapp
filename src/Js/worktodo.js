@@ -30,7 +30,7 @@ class TodoItem extends Component {
 					</div>
 
 					<div className = 'sline'>
-						<p className = 'sline-time'>A faire a {this.props.val.time}</p>
+						<p className = 'sline-time'>A faire a: {this.props.val.time}</p>
 					</div>
 
 					<div className = 'tline'>

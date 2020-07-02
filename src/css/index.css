@@ -8,7 +8,7 @@ body
 {
   margin: 0;
   padding: 0;
-  background-color: grey;
+  background-color: #1e1b39;
   height :100vh ;
 }
 
@@ -22,11 +22,11 @@ main
 /*ClasseName and Id*/
 .clroot
 {
-  background-color: white ;
-  /* min-width: 300px;; */
+
+  min-width: 300px;
   max-width: 500px;
   height :100vh ;
-
+	color:#b7b5c4;
 }
 
 .tete
@@ -40,7 +40,8 @@ main
 .tete h1
 {
 	display: inline-block;
-	color: #eebb4d;
+	color: #573090;
+	font-family: 'Pacifico', cursive;
 }
 
 .tete span
@@ -59,18 +60,16 @@ main
 }
 
 .tab .active {
-	background-color: white;
-	border-radius: 6px;
-	color: #96bb7c;
-	box-shadow: 0 0px 15px 0px #f5f5f5;
+	border-radius: 4px;
+	color: white;
+	box-shadow: 0 0px 2px 0px #f5f5f5;
 }
 
 .tab {
-	margin: 15px 0;
+	margin: 25px 0;
 	padding: 0;
 	display: grid;
 	grid-template-columns: 50% 50%;
-	/* border-bottom: 1px solid black; */
 }
 
 .tab li {
@@ -78,21 +77,23 @@ main
 	list-style: none !important;
 	text-align: center;
 	padding : 5px 0;
+	font-family: 'EB Garamond', serif;
 }
 
 .item-date
 {
 	margin: 20px 0 0 10px;
 	padding: 0;
+	color: white;
 }
 
 .item-content 
 {
 	margin: 10px 0px;
 	padding: 10px;
-	background-color: #dee3e2;
-	box-shadow: 0 0 4px 0 var(--shadowcolor);
-	border-radius: 5px;
+	background-color: #f4f6ff;
+	box-shadow: 0 0 3px 0;
+	border-radius: 3px;
 }
 
 .item-content .fline 
@@ -104,10 +105,14 @@ main
 .item-content .fline h5
 {
 	display: inline-block;
+	color: black;
+	font-family: 'Dancing Script', cursive;
+	font-size: 25px;
 }
 
 .item-content .fline span 
 {
+	color: #252448;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -121,10 +126,15 @@ main
 .item-content .sline p 
 {
 	display: inline-block;
-	color: grey;
+	color: rgb(94, 91, 91);
 	margin: 0;
 	padding: 0;
+	font-family: 'Martel', serif;
+}
 
+.sline-reason
+{
+	color: #06623b !important;
 }
 
 .item-content .sline-time
@@ -152,6 +162,23 @@ main
 	margin : 0 5px;
 }
 
+.thumb_up_alt
+{
+	color: #438a5e;
+}
+
+.delete
+{
+	color: #e7305b ;
+}
+
+.edit {
+	color: #222831;
+}
+.info
+{
+	color: #035aa6;
+}
 .tline {
 	 display: flex !important;
 	 justify-content:  flex-end;
@@ -163,12 +190,84 @@ main
 	 display: block;
 }
 
+.search-bar
+{
+	box-shadow: 0 0 3px 0 ;
+}
+
+.modal 
+{
+	min-width: 300px;
+}
+.modal-footer
+{
+	background-color: #252448;
+}
+.btn-quit
+{
+	margin-right: 15px;
+}
+
+.text-question {
+	color: rgb(26, 25, 25);
+}
+
+.text-answer {
+	color: rgb(94, 91, 91);
+}
 
 /* Forward */
 
 .material-icons.greencol { 
+	color: white;
 	font-size: 30px;	
 }
+ .search-bar[placeholder] {
+	font-family: 'EB Garamond', serif;
+	font-style: italic;
+ }
+
+
+.modal-body input[placeholder]
+{
+	font-family: 'EB Garamond', serif;
+	font-style: italic;
+}
+.modal-body input[type="date"]
+{
+	font-family: 'EB Garamond', serif;
+	font-style: italic;
+}
+
+.modal-body input[type="time"]
+{
+	font-family: 'EB Garamond', serif;
+	font-style: italic;
+}
+
+.modal-body textarea[placeholder]
+{
+	font-family: 'EB Garamond', serif;
+	font-style: italic;
+}
+::-webkit-scrollbar {
+	width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: #9d9ead; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background:#252448; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background:#1e1b39; 
+  }
 
 /*//Events*/
 

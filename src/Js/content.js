@@ -60,7 +60,7 @@ class Contenu extends React.PureComponent {
 				onChange = {(e) => this.getChanged(e, false)} 
 				value = {this.state.searchintodo} 
 				placeholder="Rechercher une tache a effectuer" 
-				className="form-control" id="todosearch" aria-describedby="helptodosearch" 
+				className="form-control search-bar" id="todosearch" aria-describedby="helptodosearch" 
 				required />
 				</div>
 				<div>
@@ -73,7 +73,7 @@ class Contenu extends React.PureComponent {
 				onChange = {(e) => this.getChanged(e, true)} 
 				value = {this.state.searchindone} 
 				placeholder="Rechercher une tache deja accomplie" 
-				className="form-control" id="donesearch" aria-describedby="helpdonesearch" 
+				className="form-control search-bar" id="donesearch" aria-describedby="helpdonesearch" 
 				required />
 				</div>
 				<div>
