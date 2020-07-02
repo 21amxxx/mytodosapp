@@ -3,13 +3,13 @@ import Content from './content'
 
 const Title = () => {
 	return (
-		<h1> MyTodos </h1>
+		<h1 onClick={() => localStorage.clear()}> MyTodos </h1>		
 	)
 }
 
 const Addicon = () => {
 	return (
-		<span id = "spanmodal" data-toggle="modal" data-target="#addmodal" className="material-icons greencol">add</span>
+		<span  id = "spanmodal" data-toggle="modal" data-target="#addmodal" className="material-icons greencol">add</span>
 	)
 }
 

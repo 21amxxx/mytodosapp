@@ -233,13 +233,7 @@ class ModifyForm extends Component {
 class Modifytodomodal extends React.PureComponent {
 
 	forSave = () => {
-		// this.props.forChange(this.state)
-		let libelle = document.querySelector("#nomChange").value
-		let date = document.querySelector("#jourChange").value
-		let time = document.querySelector("#heureChange").value
-		let descripion = document.querySelector("#descripChange").value
-		let tache = {libelle, date, time, descripion}
-		this.props.forChange(tache)
+		this.props.forChange()
 	}
 
 	render() {

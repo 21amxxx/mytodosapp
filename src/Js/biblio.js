@@ -1,9 +1,11 @@
 import $ from 'jquery'
+import Logo from  '../img/not-logo.png'
 
-export function arrayRemove(arr, value) { return arr.filter(function(ele){ return ele !== value; });}
+export function arrayRemove(arr, value) { 
+	return arr.filter(function(ele){ return ele !== value; });}
 
 // affiche une valeur en console
-export let AffCons = (val) => {console.log(val)}
+export const AffCons = (val) => {console.log(val)}
 
 // Pour le passage d'un onglet a un autre
 export const AfficheOnglet = (li) => {
@@ -122,7 +124,10 @@ export const GetTodayDate = () => {
    		break;
    	case 12:
    		mois = " Decembre "
-   		break;
+		   break;
+	default: 
+		console.log("Date value incorrect !")
+		break
    }
 
    var currentDate = dd + mois  + yyyy;
@@ -186,7 +191,10 @@ export const ToFormateDate = (oldDate) => {
    		break
    	case "12":
    		lmois = " Decembre "
-   		break
+		   break
+	default: 
+		console.log("Date value incorrect !")
+		break
    }
 	let day = Alldate[2]
 	if(Alldate[2] < 10 )
@@ -306,6 +314,110 @@ export const FilterList = (oldlist, tache) => {
 	} 
 	return newlist
 }
+export  const GetTimeStamps = (date, time) => {
+	let dates = date.split('-')
+	let times = time.split(':')
+	let t = new Date(parseInt(dates[0]), parseInt(dates[1]), parseInt(dates[2]), parseInt(times[0]), parseInt(times[1]));  
+	return t.getTime()
+}
+
+const doNotify = (tache) => {
+	let title = "Hey ! Il est temps d'executer la tache : " + tache.libelle;
+	let t = GetTimeStamps(tache.date, tache.time)
+	let options = {
+		body: "By Mytodos",
+		lang: 'en-CA',
+		icon: Logo ,
+		tag: tache.id,
+		timestamp: t,
+		vibrate: [100, 200, 100]
+	}
+	let n = new Notification(title, options);
+	n.addEventListener('close', function(ev){
+		$('.toast').toast('show')
+	});
+	setTimeout( n.close.bind(n), 6000); //close notification after 3 seconds
+}
+
+export const SetNotifcation = (item) => {
+	if( 'Notification' in window){
+            
+		if (Notification.permission === 'granted') {
+			// If it's okay let's create a notification
+			doNotify(item);
+		}else{
+			//notification == denied
+			Notification.requestPermission()
+				.then(function(result) {
+					if( Notification.permission === 'granted'){ 
+						doNotify(item);
+					}
+				})
+				.catch( (err) => {
+					console.log(err);
+				});
+		}
+	
+	}
+	
+}
+
+export const VerifyStorage = (type) => {
+		try {
+			var storage = window[type],
+				x = '__storage_test__';
+			storage.setItem(x, x);
+			storage.removeItem(x);
+			return true;
+		}
+		catch(e) {
+			return e instanceof DOMException && (
+				// everything except Firefox
+				e.code === 22 ||
+				// Firefox
+				e.code === 1014 ||
+				// test name field too, because code might not be present
+				// everything except Firefox
+				e.name === 'QuotaExceededError' ||
+				// Firefox
+				e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+				// acknowledge QuotaExceededError only if there's something already stored
+				storage.length !== 0;
+		}
+}
+
+export const NowStorageState = () => {
+    var data = '';
+
+    console.log('Current local storage: ');
+
+    for(var key in window.localStorage){
+
+        if(window.localStorage.hasOwnProperty(key)){
+            data += window.localStorage[key];
+            console.log( key + " = " + ((window.localStorage[key].length * 16)/(8 * 1024)).toFixed(2) + ' KB' );
+        }
+
+    }
+
+    console.log(data ? '\n' + 'Total space used: ' + ((data.length * 16)/(8 * 1024)).toFixed(2) + ' KB' : 'Empty (0 KB)');
+    console.log(data ? 'Approx. space remaining: ' + (5120 - ((data.length * 16)/(8 * 1024)).toFixed(2)) + ' KB' : '5 MB');
+}
+
+export const StorageState = () => {
+	var data = '';
+
+    for(var key in window.localStorage){
+
+        if(window.localStorage.hasOwnProperty(key)){
+            data += window.localStorage[key];
+        }
+
+	}
+	let res = (5120 - ((data.length * 16)/(8 * 1024)).toFixed(2)) 
+	return res
+}
+	
 
 // Dechets
 // const Tachefai = props => {

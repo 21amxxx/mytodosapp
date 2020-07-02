@@ -215,6 +215,22 @@ main
 .text-answer {
 	color: rgb(94, 91, 91);
 }
+.toast {
+	position: absolute; bottom: 0; left: 0;
+}
+
+.encap-toast {
+	 min-height: 200px;
+}
+.rounded {
+	border-radius: 5em !important;
+	max-width: 30px;
+	max-height: 30px;
+}
+.toast-body
+{
+	color: black;
+}
 
 /* Forward */
 
@@ -251,7 +267,7 @@ main
 	font-style: italic;
 }
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 3px;
   }
   
   /* Track */
