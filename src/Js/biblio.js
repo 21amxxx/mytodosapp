@@ -352,6 +352,12 @@ export const SetNotifcation = (item) => {
 					if( Notification.permission === 'granted'){ 
 						doNotify(item);
 					}
+					else
+					{
+						$('.mr-auto').text('Attention !')
+						$('.toast-body').text("La notification des taches est desactivee.")
+						$('.toast').toast('show')
+					}
 				})
 				.catch( (err) => {
 					console.log(err);

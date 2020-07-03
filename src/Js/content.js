@@ -1,6 +1,6 @@
 
 import React from 'react'
-import $ from 'jquery';
+import $ from 'jquery'
 import * as biblio from './biblio.js'
 import Addtodomodal from './addtodomodal'
 import Worktodo from './worktodo'
@@ -110,20 +110,18 @@ class Content extends React.PureComponent {
 				})
 				idForDone = parseInt(localStorage.getItem('idForDone'))
 				idForTodo = parseInt(localStorage.getItem('idForTodo'))
-				console.log("AP")
 			}
 			else {
 				localStorage.setItem('todolist', '[]')
 				localStorage.setItem('donelist', '[]')
 				localStorage.setItem('idForDone', '0')
 				localStorage.setItem('idForTodo', '0')
-				console.log("AS")
 			}
 
 		}
 		else {
 			// Malheureusement, localStorage n'est pas disponible
-			alert("LocalStorage n'est pas supporte par votre navigateur: Les donnees seront perdues a la fermeture de la fenetre")
+			alert("LocalStorage n'est pas supporte par votre navigateur: Les donnees seront perdues a la fermeture de la fenetre.")
 		}
 
 	}
@@ -142,6 +140,9 @@ class Content extends React.PureComponent {
 			localStorage.removeItem("donelist")
 			console.log("Apres la supression des donnees")
 			biblio.NowStorageState()
+			console.log("To clear all datas, execute the following command in console : localStorage.clear()")
+			console.log("Warning !!! It clears all your datas! ")
+
 		}
 		let todolist = this.state.todo
 		if (todolist.length) {
@@ -429,7 +430,7 @@ class Content extends React.PureComponent {
 			} else {
 				doneliste = biblio.FilterList(doneliste, doneitem)
 			}
-			$('.toast').toast('show')
+			
 			if (biblio.VerifyStorage('localStorage')) {
 
 				localStorage.setItem('idForDone', toString(idForDone))
@@ -437,6 +438,9 @@ class Content extends React.PureComponent {
 				localStorage.setItem('donelist', JSON.stringify(doneliste))
 			}
 			this.setState({ todo: todoliste, done: doneliste, waitList: waitlist })
+			$('.mr-auto').text('Bravo !!!')
+			$('.toast-body').text("Encore une tache executee !")
+			$('.toast').toast('show')
 		}
 
 

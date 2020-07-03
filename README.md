@@ -1,3 +1,16 @@
+# My own Readme file
+
+This is my first project. An todo application that you can install, that fired a notification when that is on and that is online !!! :)
+
+I will improve it more within another branch but now, all is fine.
+
+Enjoy it ! 
+
+
+Thanks God.
+
+# Old Readme 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

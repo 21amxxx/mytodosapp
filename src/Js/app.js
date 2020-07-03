@@ -3,7 +3,7 @@ import Content from './content'
 
 const Title = () => {
 	return (
-		<h1 onClick={() => localStorage.clear()}> MyTodos </h1>		
+		<h1> MyTodos </h1>		
 	)
 }
 
