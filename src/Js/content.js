@@ -157,7 +157,15 @@ class Content extends React.PureComponent {
 					$('#infodonemodal').modal('hide')
 					$('#modifymodal').modal('hide')
 					$('#infomodal').modal('hide')
-					biblio.SetNotifcation(todolist[i])
+					if(!biblio.DetectMobile()){
+						biblio.SetNotifcation(todolist[i])
+					}
+					else
+					{
+						$('.mr-auto').text('Bravo !!!')
+						$('.toast-body').text("Encore une tache executee !")
+						$('.toast').toast('show')
+					}
 					idForDone = idForDone + 1
 					let doneitem = {
 						id: idForDone,

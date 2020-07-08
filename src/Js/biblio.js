@@ -334,9 +334,11 @@ const doNotify = (tache) => {
 	}
 	let n = new Notification(title, options);
 	n.addEventListener('close', function(ev){
+		$('.mr-auto').text('Bravo !!!')
+		$('.toast-body').text("Encore une tache executee !")
 		$('.toast').toast('show')
 	});
-	setTimeout( n.close.bind(n), 6000); //close notification after 3 seconds
+	setTimeout(n.close.bind(n), 6000); //close notification after 3 seconds
 }
 
 export const SetNotifcation = (item) => {
@@ -355,7 +357,7 @@ export const SetNotifcation = (item) => {
 					else
 					{
 						$('.mr-auto').text('Attention !')
-						$('.toast-body').text("La notification des taches est desactivee.")
+						$('.toast-body').text("Les notifications sont desactivees.")
 						$('.toast').toast('show')
 					}
 				})
@@ -423,106 +425,27 @@ export const StorageState = () => {
 	let res = (5120 - ((data.length * 16)/(8 * 1024)).toFixed(2)) 
 	return res
 }
-	
 
-// Dechets
-// const Tachefai = props => {
-
-// 	const line = props.Data.map((val, id) => {
-// 		return (
-// 			<div key = {id} className = 'item'>
-// 				<div className = 'fline'>
-// 					<h5>{val.libelle}</h5>
-// 					<span className="material-icons orange600 md-18">close</span>
-// 				</div>
-// 				<div className = 'sline'>
-// 					<p  className = 'sline-date'>Fait le : {val.date}</p>
-// 					<p className = 'sline-time'>A : {val.time}</p>
-// 				</div>
-// 				<div className = 'tline'>
-// 					<p>{val.descripion}</p>
-// 				</div>
-// 			</div>
-// 		)
-// 	})
-// 	return (
-// 		<div>{line}</div>
-// 	)
-// }
-// const Tachefaire = props => {
-
-// 	const line = props.Data.map((val, id) => {
-// 		return (
-// 			<div key = {id} className = 'item'>
-// 				<div className = 'fline'>
-// 					<h5>{val.libelle}</h5>
-// 					<span className="material-icons orange600 md-18">close</span>
-// 				</div>
-// 				<div className = 'sline'>
-// 					<p  className = 'sline-date'>A faire le : {val.date}</p>
-// 					<p className = 'sline-time'>A : {val.time}</p>
-// 				</div>
-// 				<div className = 'tline'>
-// 					<p className = "block-with-text">{val.descripion}</p>
-// 				</div>
-// 			</div>
-// 		)
-// 	})
-// 	return (
-// 		<div>{line}</div>
-// 	)
-// }
-
-// export {arrayRemove, AffCons, ValInput};
-
-// export const ForCollapseDesc = () =>{
-
-      // let liste = document.querySelectorAll('.item')
-      // for (var j=0; j< liste.length; j++)
-      // {
-      //    liste[j].addEventListener('click', CollapseDesc)
-      // }
-
-//}
-
-// const CollapseDesc = (e) => {
-//    // e.preventDefault()
-//    let item = e.currentTarget
-//    let parent = item.parentNode
-//    if ($(item).find('.tline').find('.item-option').css('display') === 'none')
-//    {
-//       if($(item).find('.tline').find('.item-option').text() !== "")
-//       {
-//          DisplayAzero(parent)
-//          $(item).find('.tline').find('.item-option').css('display', 'block')
-//          let more = $(item).find('.fline').find('div').find('.expand_more')
-//          let less = $(item).find('.fline').find('div').find('.expand_less')
-//          less.css("display", "block")
-//          more.css("display", "none")
-
-//       }
-//    }
-//    else
-//    {
-//       $(item).find('.tline').find('.item-option').css('display', 'none')
-//          let more = $(item).find('.fline').find('div').find('.expand_more')
-//          let less = $(item).find('.fline').find('div').find('.expand_less')
-//          less.css("display", "none")
-//          more.css("display", "block")
-//    }
-// }
-
-// export const ForCollapseDesc = () =>{
-
-// 	let more = document.querySelectorAll('.expand_more')
-// 	for (var j=0; j< more.length; j++)
-// 	{
-// 	   more[j].addEventListener('click', CollapseDesc)
-// 	}
-// 	let less = document.querySelectorAll('.expand_less')
-// 	for (var j=0; j< less.length; j++)
-// 	{
-// 	   less[j].addEventListener('click', CollapseDesc)
-// 	}
- 
-//  }
+export const DetectMobile = () => {
+	var hasTouchScreen = false;
+	if ("maxTouchPoints" in navigator) { 
+	hasTouchScreen = navigator.maxTouchPoints > 0;
+	} else if ("msMaxTouchPoints" in navigator) {
+	hasTouchScreen = navigator.msMaxTouchPoints > 0; 
+	} else {
+	var mQ = window.matchMedia && matchMedia("(pointer:coarse)");
+	if (mQ && mQ.media === "(pointer:coarse)") {
+		hasTouchScreen = !!mQ.matches;
+	} else if ('orientation' in window) {
+		hasTouchScreen = true; // deprecated, but good fallback
+	} else {
+		// Only as a last resort, fall back to user agent sniffing
+		var UA = navigator.userAgent;
+		hasTouchScreen = (
+			/\b(BlackBerry|webOS|iPhone|IEMobile)\b/i.test(UA) ||
+			/\b(Android|Windows Phone|iPad|iPod)\b/i.test(UA)
+		);
+	}
+	}
+	return hasTouchScreen
+}
