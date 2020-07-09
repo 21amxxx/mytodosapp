@@ -223,11 +223,12 @@ class Content extends React.PureComponent {
 				let inst = this.state.todo
 				inst.reverse()
 				let newlist = biblio.FilterList(inst, tache)
+				let finalList = newlist.reverse()
 				if (biblio.VerifyStorage('localStorage')) {
 					localStorage.setItem('idForTodo', toString(idForTodo))
-					localStorage.setItem('todolist', JSON.stringify(newlist.reverse()))
+					localStorage.setItem('todolist', JSON.stringify(finalList))
 				}
-				this.setState({ todo: newlist.reverse() })
+				this.setState({ todo: finalList })
 			}
 
 		}
