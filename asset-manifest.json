@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/mytodosapp/static/css/main.75a936c1.chunk.css",
-    "main.js": "/mytodosapp/static/js/main.66a0d35d.chunk.js",
-    "main.js.map": "/mytodosapp/static/js/main.66a0d35d.chunk.js.map",
+    "main.css": "/mytodosapp/static/css/main.ce668266.chunk.css",
+    "main.js": "/mytodosapp/static/js/main.ec9069be.chunk.js",
+    "main.js.map": "/mytodosapp/static/js/main.ec9069be.chunk.js.map",
     "runtime-main.js": "/mytodosapp/static/js/runtime-main.3a3c2a02.js",
     "runtime-main.js.map": "/mytodosapp/static/js/runtime-main.3a3c2a02.js.map",
     "static/css/2.af3c1da9.chunk.css": "/mytodosapp/static/css/2.af3c1da9.chunk.css",
     "static/js/2.c4464018.chunk.js": "/mytodosapp/static/js/2.c4464018.chunk.js",
     "static/js/2.c4464018.chunk.js.map": "/mytodosapp/static/js/2.c4464018.chunk.js.map",
     "index.html": "/mytodosapp/index.html",
-    "precache-manifest.d73e54e2ae666bc9820ef0f11d49c482.js": "/mytodosapp/precache-manifest.d73e54e2ae666bc9820ef0f11d49c482.js",
+    "precache-manifest.4cb09a4e4502136bb79c2cfc53ec51ae.js": "/mytodosapp/precache-manifest.4cb09a4e4502136bb79c2cfc53ec51ae.js",
     "service-worker.js": "/mytodosapp/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/mytodosapp/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.75a936c1.chunk.css.map": "/mytodosapp/static/css/main.75a936c1.chunk.css.map",
+    "static/css/main.ce668266.chunk.css.map": "/mytodosapp/static/css/main.ce668266.chunk.css.map",
     "static/js/2.c4464018.chunk.js.LICENSE.txt": "/mytodosapp/static/js/2.c4464018.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3a3c2a02.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.c4464018.chunk.js",
-    "static/css/main.75a936c1.chunk.css",
-    "static/js/main.66a0d35d.chunk.js"
+    "static/css/main.ce668266.chunk.css",
+    "static/js/main.ec9069be.chunk.js"
   ]
 }
